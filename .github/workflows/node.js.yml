@@ -27,9 +27,10 @@ jobs:
         cache: 'npm'
     - run: npm install 
     - run: npm run build
+    - run: npm test
     - name: Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 
         name: artifacts
         path: dist/*
-#     - run: npm test
+    
